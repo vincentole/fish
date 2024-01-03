@@ -38,7 +38,7 @@ function pushdots
     end
     
     function push_folder
-        echo -e "\n$argv:\n"
+        echo -e "\n\n$argv:"
         cd ~/.config/$argv/; add_and_push
     end
 
