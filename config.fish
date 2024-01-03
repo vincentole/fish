@@ -37,12 +37,21 @@ function pushdots
         git push
     end
     
+    echo -ne "\nNvim... "
     cd ~/.config/nvim/
     add_and_push
+    echo "Done"
 
+    echo -ne "\nKitty... "
     cd ~/.config/kitty/
     add_and_push
+    echo "Done"
 
+
+    echo -ne "\nFish... "
     cd ~/.config/fish/
     add_and_push
+    echo "Done"
+    
+    cd
 end
