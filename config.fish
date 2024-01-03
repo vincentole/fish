@@ -37,17 +37,14 @@ function pushdots
         git push
     end
     
-    echo -e "\nNvim:\n"
-    cd ~/.config/nvim/
-    add_and_push
+    function push_folder
+        echo -e "\n$argv:\n"
+        cd ~/.config/$argv/; add_and_push
+    end
 
-    echo -e "\nKitty:\n"
-    cd ~/.config/kitty/
-    add_and_push
+    push_folder nvim
+    push_folder kitty
+    push_folder fish
 
-    echo -e "\nFish\n"
-    cd ~/.config/fish/
-    add_and_push
-    
     cd
 end
