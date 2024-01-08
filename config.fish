@@ -4,7 +4,7 @@ end
 
 # Fish
 set fish_greeting
-alias fishconf 'nvim ~/.config/fish/config.fish'
+alias fishconf 'hx ~/.config/fish/config.fish'
 alias fishsource 'source ~/.config/fish/config.fish'
 
 # System programs
@@ -15,8 +15,7 @@ set -g -x BAT_THEME gruvbox-dark
 
 # Shell scripts
 alias update '~/.shell_scripts/update.sh'
-alias pushdots '~/.shell_scripts/push_dots.sh'
-alias pulldots '~/.shell_scripts/pull_dots.sh'
+alias dots '~/.shell_scripts/dots.sh'
 
 # Fnm - node version manager
 # Make sure the fnm bin is in the path
