@@ -14,8 +14,8 @@ alias bat batcat
 set -g -x BAT_THEME gruvbox-dark
 
 # Shell scripts
-alias update '~/.sh/update.sh'
-alias pushdots '~/.sh/push_dots.sh'
+alias update '~/.shell_scripts/update.sh'
+alias pushdots '~/.shell_scripts/push_dots.sh'
 
 # Fnm - node version manager
 # Make sure the fnm bin is in the path
@@ -36,4 +36,4 @@ fish_add_path ~/.cargo/env
 
 # Neovim
 alias nvimconf 'nvim ~/.config/nvim/init.lua'
-alias rmnvim '~/.sh/rmnvim.sh'
+alias rmnvim '~/.shell_scripts/rmnvim.sh'
