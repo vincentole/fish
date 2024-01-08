@@ -26,7 +26,7 @@ set -g -x LLVM_CONFIG /usr/bin/llvm-config-17
 alias llvm-config llvm-config-17
 alias clang clang-17
 fish_add_path ~/.odin/
-fish_add_path ~/.ols/
+fish_add_path ~/.lsp/ols/
 
 
 # Rust
