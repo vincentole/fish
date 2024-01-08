@@ -2,49 +2,38 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Fish
 set fish_greeting
+alias fishconf 'nvim ~/.config/fish/config.fish'
+alias fishsource 'source ~/.config/fish/config.fish'
 
+# System programs
 alias ll 'exa -lbah --git'
+
 alias bat batcat
 set -g -x BAT_THEME gruvbox-dark
 
+# Shell scripts
+alias update '~/.sh/update.sh'
+alias pushdots '~/.sh/push_dots.sh'
 
-# Node version manager: https://github.com/Schniz/fnm
+# Fnm - node version manager
 # Make sure the fnm bin is in the path
 fnm env | source
 
-# Set llvm to version 14 - Odin-lang requires this currently
-#set -g -x LLVM_CONFIG /usr/bin/llvm-config-14
-#alias llvm-config llvm-config-14
-#fish_add_path /home/ole-urfels/.local/share/Odin/
+# Odin lang
+set -g -x LLVM_CONFIG /usr/bin/llvm-config-17
+alias llvm-config llvm-config-17
+alias clang clang-17
+fish_add_path ~/.odin/
+fish_add_path ~/.ols/
 
+
+# Rust
 fish_add_path ~/.cargo/bin/
 fish_add_path ~/.cargo/env
 
-function rmnvim
-    rm -rf ~/.config/nvim
-    mkdir ~/.config/nvim
-    rm -rf ~/.local/share/nvim
-    rm -rf ~/.local/state/nvim
-    rm -rf ~/.cache/nvim
-    printf "Deleted the following directories:\n~/.config/nvim\n~/.local/share/nvim\n~/.local/state/nvim\n~/.cache/nvim\n\nCreated the following directory:\n~/.config/nvim"
-end
 
-function pushdots
-    function add_and_push
-        git add .
-        git commit -m 'update config'
-        git push
-    end
-    
-    function push_folder
-        echo -e "\n\n$argv:"
-        cd ~/.config/$argv/; add_and_push
-    end
-
-    push_folder nvim
-    push_folder kitty
-    push_folder fish
-
-    cd
-end
+# Neovim
+alias nvimconf 'nvim ~/.config/nvim/init.lua'
+alias rmnvim '~/.sh/rmnvim.sh'
