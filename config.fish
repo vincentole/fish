@@ -4,7 +4,7 @@ end
 
 # Fish
 set fish_greeting
-alias fishconf 'hx ~/.config/fish/config.fish'
+alias fishconf 'nvim ~/.config/fish/config.fish'
 alias fishsource 'source ~/.config/fish/config.fish'
 
 # System programs
