@@ -33,6 +33,9 @@ fish_add_path ~/.lsp/ols/
 fish_add_path ~/.cargo/bin/
 fish_add_path ~/.cargo/env
 
+# Keymapp
+fish_add_path ~/.keymapp/
+
 
 # Neovim
 alias nvimconf 'nvim ~/.config/nvim/init.lua'
