@@ -28,15 +28,21 @@ alias clang clang-17
 fish_add_path ~/.odin/
 fish_add_path ~/.lsp/ols/
 
-
 # Rust
 fish_add_path ~/.cargo/bin/
-fish_add_path ~/.cargo/env
+fish_add_path ~/.cargo/env/
+
+# Go
+fish_add_path /usr/local/go/bin/
 
 # Keymapp
 fish_add_path ~/.keymapp/
 
-
 # Neovim
+alias vi nvim
+alias vim nvim
 alias nvimconf 'nvim ~/.config/nvim/init.lua'
 alias rmnvim '~/.shell_scripts/rmnvim.sh'
+
+# Emacs
+fish_add_path ~/.config/emacs/bin/
