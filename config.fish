@@ -9,6 +9,7 @@ alias fishsource 'source ~/.config/fish/config.fish'
 
 # System programs
 alias ll 'exa -lbah --git'
+fish_add_path ~/.local/bin/
 
 alias bat batcat
 set -g -x BAT_THEME gruvbox-dark
